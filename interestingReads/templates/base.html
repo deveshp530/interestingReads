@@ -11,7 +11,16 @@
         <a href="/">Books</a>
         <a href="{% url 'create_book' %}"> Add a book</a>
     </nav>
-    {% block content %} {% endblock %}
+
+    {% if user.is_authenticated %} Welcome, {{ user.username }}
+    <a href="{% url 'logout' %}">Log out</a>
+    {% else %}
+    <a href="{% url 'login' %}">Login</a>
+    <a href="{% url 'signup' %}">Sign Up</a>
+    {% endif %}
+    
+    {% block content %} 
+    {% endblock %}
     
 </body>
 </html>
