@@ -36,6 +36,9 @@ LOGOUT_URL = 'logout'
 SOCIAL_AUTH_GITHUB_KEY = config('Client_ID', cast=str)
 SOCIAL_AUTH_GITHUB_SECRET  = config('Client_Secret', cast=str)
 
+SOCIAL_AUTH_FACEBOOK_KEY = config('Facebook_ID', cast=str)
+SOCIAL_AUTH_FACEBOOK_SECRET = config('Facebook_Secret', cast=str)
+
 
 
 # Application definition
